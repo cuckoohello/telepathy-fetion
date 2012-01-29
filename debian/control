@@ -6,7 +6,7 @@ Uploaders: Yafeng
 Build-Depends: libxml2-dev,cmake,libtelepathy-glib-dev,libssl-dev,debhelper,libglib2.0-dev
 Standards-Version: 1.1.0
 Homepage: http://cuckoohello.wordpress.com
-Vcs-Git: git://github.com/cuckoohello/minifetion.git
+Vcs-Git: git://github.com/cuckoohello/telepathy-fetion.git
 
 Package: telepathy-fetion
 Architecture: any
