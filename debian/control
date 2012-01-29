@@ -1,0 +1,15 @@
+Source: telepathy-fetion
+Section: user/net
+Priority: optional
+Maintainer: Yafeng Shan <cuckoohello@gmail.com>
+Uploaders: Yafeng 
+Build-Depends: libxml2-dev,cmake,libtelepathy-glib-dev,libssl-dev,debhelper,libglib2.0-dev
+Standards-Version: 1.1.0
+Homepage: http://cuckoohello.wordpress.com
+Vcs-Git: git://github.com/cuckoohello/minifetion.git
+
+Package: telepathy-fetion
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: fetion plugin for telepathy
+    fetion plugin for telepathy

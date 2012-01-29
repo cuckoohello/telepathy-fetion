@@ -1,0 +1,30 @@
+1. account login
+done
+
+2. account auth 
+qt support
+done 
+show message
+
+3. error status
+done but relogin while login somewhere else
+
+4. local name
+done
+
+5. sms online not as offline
+not available for unauthroized
+
+6.buddy add request ,recv 
+
+6. proto icon
+
+7. n9 fetion ui
+done
+
+8. auth generate manager file 
+
+9. minifetion support
+
+10.fetion keep alive error connection error
+

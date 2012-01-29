@@ -1,0 +1,27 @@
+[ConnectionManager]
+Interfaces=
+
+[Protocol fetion]
+Interfaces=
+ConnectionInterfaces=org.freedesktop.Telepathy.Connection.Interface.Requests;org.freedesktop.Telepathy.Connection.Interface.Contacts;org.freedesktop.Telepathy.Connection.Interface.Presence;org.freedesktop.Telepathy.Connection.Interface.SimplePresence;org.freedesktop.Telepathy.Connection.Interface.Avatars;
+param-account=s required register
+param-password=s register secret
+RequestableChannelClasses=contactlist;contactgroup;1-1-text;
+VCardField=x-telepathy-fetion
+EnglishName=Example with a contact list
+Icon=face-smile
+
+[contactlist]
+org.freedesktop.Telepathy.Channel.ChannelType s=org.freedesktop.Telepathy.Channel.Type.ContactList
+org.freedesktop.Telepathy.Channel.TargetHandleType u=3
+allowed=org.freedesktop.Telepathy.Channel.TargetHandle;org.freedesktop.Telepathy.Channel.TargetID;
+
+[contactgroup]
+org.freedesktop.Telepathy.Channel.ChannelType s=org.freedesktop.Telepathy.Channel.Type.ContactList
+org.freedesktop.Telepathy.Channel.TargetHandleType u=4
+allowed=org.freedesktop.Telepathy.Channel.TargetHandle;org.freedesktop.Telepathy.Channel.TargetID;
+
+[1-1-text]
+org.freedesktop.Telepathy.Channel.ChannelType s=org.freedesktop.Telepathy.Channel.Type.Text
+org.freedesktop.Telepathy.Channel.TargetHandleType u=1
+allowed=org.freedesktop.Telepathy.Channel.TargetHandle;org.freedesktop.Telepathy.Channel.TargetID;

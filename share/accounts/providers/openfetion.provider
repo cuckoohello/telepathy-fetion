@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE provider>
+<provider version="1.0" id="openfetion">
+   <name>China Mobile Fetion</name>
+   <translations>openfetion</translations>
+   <short-description>Chat with China Mobile fetion contacts</short-description>
+   <description>Set up a China mobile fetion account</description>
+   <icon>icon-m-service-openfetion</icon>
+   <register type="formular"/>
+   <!--<install-existing>
+        <setting name="username" type="string" is_displayname="true"/>
+        <setting name="password" type="password"/>
+  </install-existing>-->
+  <account-setup>
+        <register type="formular"/>
+        <setting name="remember" type="boolean"/>
+        <setting name="username" type="string" is_displayname="true" />
+        <setting name="password" type="password"/>
+        <setting name="store_password_in_accounts" type="boolean" default_value="true" />
+        <authsession>
+          <validate method="password" mechanism="ClientLogin"/>
+            <method name="password">
+                    <mechanism name="ClientLogin"/>
+			<tokens></tokens>
+            </method>
+        </authsession>
+    </account-setup>
+</provider>
+
