@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=Ofetion
+Icon=icon-m-service-openfetion
+OnlyShownIn=X-MeeGo
+Exec=dbus-send --session --print-reply --type="method_call" --dest=com.nokia.maemo.meegotouch.Contacts  / com.nokia.maemo.meegotouch.ContactsInterface.openContactListForService string:"openfetion"

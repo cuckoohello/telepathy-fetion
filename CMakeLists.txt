@@ -149,6 +149,8 @@ if(DEFINED IS_ARM)
     install(DIRECTORY ${FETION_ACCOUNTS_FILES} DESTINATION "/usr/share/accounts/")
     file(GLOB FETION_BIN_FILES "share/bin/*")
     install(PROGRAMS ${FETION_BIN_FILES} DESTINATION "${DATA_INSTALL_DIR}/bin/")
+    file(GLOB FETION_DESKTOP_FILE "share/applications/*")
+    install(FILES  ${FETION_DESKTOP_FILE} DESTINATION "/usr/share/applications/")
 endif(DEFINED IS_ARM)
 
 # install icons pixmaps
