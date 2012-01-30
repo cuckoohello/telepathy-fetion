@@ -404,3 +404,22 @@ channel_manager_iface_init (gpointer g_iface,
     /* In this channel manager, Request has the same semantics as Ensure */
     iface->request_channel = fetion_im_factory_ensure_channel;
 }
+
+    void 
+telepathy_message_received(TpBaseConnection *conn ,
+        TpHandle contact,const gchar *message,time_t recv_time)
+{
+    FetionImFactory *im_factory = ((FetionConnection*)conn)->priv->im_factory;
+
+    FetionImChannel *chan = g_hash_table_lookup (im_factory->priv->channels, GUINT_TO_POINTER (contact));
+    if(chan == NULL)
+        chan = new_channel (im_factory,contact,contact,NULL);
+
+    TpMessage * received =tp_cm_message_new_text(conn,
+            contact,TP_CHANNEL_TEXT_MESSAGE_TYPE_NORMAL,message);
+
+    tp_message_set_int64(received,0,"message-sent",recv_time);
+    tp_message_set_int64(received,0,"message-received",time(NULL));
+
+    tp_message_mixin_take_received (G_OBJECT(chan), received);
+}

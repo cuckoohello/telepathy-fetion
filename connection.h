@@ -90,6 +90,9 @@ gchar *fetion_normalize_contact (TpHandleRepoIface *repo,
 
 const gchar * const * fetion_connection_get_possible_interfaces (void);
 
+void telepathy_message_received(TpBaseConnection *conn ,
+        TpHandle contact,const gchar *message,time_t recv_time);
+
 G_END_DECLS
 
 #endif

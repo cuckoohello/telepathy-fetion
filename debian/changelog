@@ -1,3 +1,9 @@
+telepathy-fetion (1.1.1) unstable; urgency=low
+
+  * fix unknown message unseen problem in n9 temporarily
+
+ -- Yafeng Shan <cuckoohello@gmail.com>  Mon, 30 Jan 2012 11:31:30 +0800
+
 telepathy-fetion (1.1.0) unstable; urgency=low
 
   * Initial public realase of telepathy-fetion

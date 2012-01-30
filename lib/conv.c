@@ -40,7 +40,9 @@ hybrid_conv_got_message(HybridAccount *account,
         return;
     }
     TpHandle contact =  tp_handle_lookup(buddy->account->contact_repo, buddy->id, NULL,NULL);
-    g_signal_emit(account->conn,signals[MESSAGE_RECEIVED],0,contact,hybrid_strip_html(message));
+    /* TODO  */
+    //g_signal_emit(account->conn,signals[MESSAGE_RECEIVED],0,contact,hybrid_strip_html(message));
+    telepathy_message_received(account->conn,contact,hybrid_strip_html(message),recv_time);
 }
 
     void
