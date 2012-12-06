@@ -4,8 +4,8 @@ Priority: optional
 Maintainer: Yafeng Shan <cuckoohello@gmail.com>
 Uploaders: Yafeng 
 Build-Depends: libxml2-dev,cmake,libtelepathy-glib-dev,libssl-dev,debhelper,libglib2.0-dev
-Standards-Version: 1.1.1
-Homepage: http://cuckoohello.wordpress.com
+Standards-Version: 1.2.0
+Homepage: http://github.com/cuckoohello/telepathy-fetion
 Vcs-Git: git://github.com/cuckoohello/telepathy-fetion.git
 
 Package: telepathy-fetion
